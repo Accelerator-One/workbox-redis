@@ -30,7 +30,15 @@ window.addEventListener('load', async () => {
   // Endpoint(s)
   await fetch("/rate", { method: "GET" })
     .then(res => appendStatus(res.status))
-    .catch(err => console.log(err.message));
+    .catch(err => {
+
+      // console.log(String(err.message));
+      if (String(err.message) === 'Failed to fetch')
+        document.body.innerHTML = `<div class='offline'>
+                                      <h2>You're offline!<h2>
+                                      <h4> Please check your network and try again </h4>
+                                   </div>`;
+    });
 
   // Rendering status
   console.log('Initial load successful in ' +

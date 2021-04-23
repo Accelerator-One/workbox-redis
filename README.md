@@ -27,6 +27,10 @@ Caching implementation and session management ( rate-limiting ) written for web 
   <br/>
   ![429](screenshots/error.png)
 
+- Offline fallback  
+  <br/>
+  ![offline](screenshots/offline.png)
+
 <br/>
 
 ### Usage
